@@ -1,6 +1,11 @@
+<!--
+ * @Author: cbw
+ * @Date: 2020-07-25 16:23:48
+ * @Description: file content
+-->
 <template>
   <div class="home">
-    路由页面
+    <el-button type="info" @click="logout">退出</el-button>
   </div>
 </template>
 
@@ -12,6 +17,13 @@ export default {
   name: "Home",
   components: {
     // HelloWorld
+  },
+  methods: {
+    logout() {
+      window.sessionStorage.clear();
+      this.$router.push("./login");
+      this.$message.success("退出成功");
+    }
   }
 };
 </script>

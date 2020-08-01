@@ -1,3 +1,8 @@
+<!--
+ * @Author: cbw
+ * @Date: 2020-08-01 17:58:00
+ * @Description: file content
+-->
 <template>
   <div class="login_container">
     <div class="login_box">
@@ -18,7 +23,7 @@
           <el-input
             v-model="loginForm.username"
             prefix-icon="iconfont icon-user"
-          ></el-input>
+          />
         </el-form-item>
         <!-- 密码 -->
         <el-form-item prop="password">
@@ -26,7 +31,7 @@
             v-model="loginForm.password"
             prefix-icon="iconfont icon-password"
             type="password"
-          ></el-input>
+          />
         </el-form-item>
 
         <!-- 按钮 -->
