@@ -1,14 +1,18 @@
 import Vue from "vue";
 // element-ui
-import { Button, Select } from "element-ui";
+import "@/plugins/element.js";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
+import axios from "axios";
+
+Vue.prototype.$http = axios;
+axios.defaults.baseURL = ""; // 配置请求的根路径
+
+// 导入全局样式
+import "@/assets/global.scss";
 
 Vue.config.productionTip = false;
-
-Vue.use(Button);
-Vue.use(Select);
 
 new Vue({
   router,
